@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Add Note</a></li>
+                <li><a href="#">Search Notes</a></li>
+                <li><a href="#">All Notes</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="add-note-container">
+        <button onclick="addNote()" id="addNoteButton">Add Note</button>
+        <textarea id="memo" placeholder="Enter Your Text"></textarea>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchPhrase" placeholder="Search...">
+        <button onclick="searchNotes()" id="searchButton">Search Note</button>
+    </div>
+
+    <div class="sort-container">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+            <option value="recent">More Recent First</option>
+            <option value="older">Older First</option>
+        </select>
+        <button id="sortButton" onclick="sortNotes()">Sort Notes</button>
+    </div>
+
+    <button onclick="showAllNotes()" id="showAllButton">Show All</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
